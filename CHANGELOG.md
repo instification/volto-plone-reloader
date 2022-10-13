@@ -6,6 +6,8 @@
 
 ### Feature
 
+ - Improve documentation [instification]
+
 ### Bugfix
 
  - Use `URL()` to parse api path [instification]
