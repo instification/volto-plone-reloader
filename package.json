@@ -17,5 +17,24 @@
   "devDependencies": {
     "@plone/scripts": "*",
     "release-it": "^15.5.0"
+  },
+  "release-it": {
+    "hooks": {
+      "after:bump": "node ./changelogupdater.cjs bump ${version}",
+      "after:release": "node ./changelogupdater.cjs back ${version} && git commit -am 'Back to development (volto-plone-reloader)' && git push"
+    },
+    "git": {
+      "changelog": "node ./changelogupdater.cjs excerpt",
+      "requireUpstream": false,
+      "requireCleanWorkingDir": false,
+      "commitMessage": "Release volto-plone-reloader ${version}",
+      "tagName": "volto-plone-reloader-${version}",
+      "tagAnnotation": "Release volto-plone-reloader ${version}"
+    },
+    "github": {
+      "release": true,
+      "releaseName": "volto-plone-reloader ${version}",
+      "releaseNotes": "node ./changelogupdater.cjs excerpt"
+    }
   }
 }
