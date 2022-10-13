@@ -1,0 +1,21 @@
+{
+  "name": "volto-plone-reloader",
+  "version": "0.1.0",
+  "description": "volto-plone-reloader: Volto add-on",
+  "main": "src/index.js",
+  "license": "MIT",
+  "keywords": [
+    "volto-addon",
+    "volto",
+    "plone",
+    "react"
+  ],
+  "scripts": {
+    "i18n": "rm -rf build/messages && NODE_ENV=production i18n --addon",
+    "release": "release-it"
+  },
+  "devDependencies": {
+    "@plone/scripts": "*",
+    "release-it": "^15.5.0"
+  }
+}
