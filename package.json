@@ -35,6 +35,9 @@
       "release": true,
       "releaseName": "volto-plone-reloader ${version}",
       "releaseNotes": "node ./changelogupdater.cjs excerpt"
+    },
+    "npm": {
+      "skipChecks": true
     }
   }
 }
