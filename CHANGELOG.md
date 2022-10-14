@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.2 (unreleased)
+
+### Breaking
+
+### Feature
+
+### Bugfix
+
+### Internal
+
 ## 0.1.1 (2022-10-14)
 
 ### Breaking
