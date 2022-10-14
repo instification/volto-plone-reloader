@@ -1,6 +1,6 @@
 {
   "name": "volto-plone-reloader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "volto-plone-reloader: Volto add-on",
   "main": "src/index.js",
   "license": "MIT",
@@ -20,11 +20,11 @@
   },
   "release-it": {
     "hooks": {
-      "after:bump": "node ./changelogupdater.cjs bump ${version}",
-      "after:release": "node ./changelogupdater.cjs back ${version} && git commit -am 'Back to development (volto-plone-reloader)' && git push"
+      "after:bump": "yarn changelogupdater bump ${version}",
+      "after:release": "yarn changelogupdater back ${version} && git commit -am 'Back to development (volto-plone-reloader)' && git push"
     },
     "git": {
-      "changelog": "node ./changelogupdater.cjs excerpt",
+      "changelog": "yarn changelogupdater excerpt",
       "requireUpstream": false,
       "requireCleanWorkingDir": false,
       "commitMessage": "Release volto-plone-reloader ${version}",
@@ -34,7 +34,7 @@
     "github": {
       "release": true,
       "releaseName": "volto-plone-reloader ${version}",
-      "releaseNotes": "node ./changelogupdater.cjs excerpt"
+      "releaseNotes": "yarn changelogupdater excerpt"
     },
     "npm": {
       "skipChecks": true
