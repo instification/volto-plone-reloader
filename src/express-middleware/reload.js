@@ -22,11 +22,10 @@ export const forwardReloadRequest = (req, pass) =>
     } else {
       apiPath = settings.apiPath;
     }
-    const re = /(.*)\/(\w+)?/;
-    apiPath = apiPath.replace(re, '$1');
+    const apiURL = new URL(apiPath);
     const request = superagent
       .get(
-        `${apiPath}/VirtualHostBase/http/${settings.host}:${settings.port}/VirtualHostRoot/${req.originalUrl}`,
+        `${apiURL.hostname}:${apiURL.port}/VirtualHostBase/http/${req.headers.host}/VirtualHostRoot/${req.originalUrl}`,
       )
       .maxResponseSize(settings.maxResponseSize)
       .responseType('html');

@@ -6,7 +6,12 @@
 
 ### Feature
 
+ - Improve documentation [instification]
+
 ### Bugfix
+
+ - Use `URL()` to parse api path [instification]
+ - Use `req.env.headers.hostname` to handle virtualhost rewriting [instification]
 
 ### Internal
 

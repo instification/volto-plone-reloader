@@ -15,13 +15,26 @@ This addon aims to resolve this problem by:
 
 ## Installation
 
-In your `package.json` add `volto-plone-reloader` to `devDependencies`:
+Add the addon to your projects `package.json`:
 
 ```
-{
-    "devDependencies": "volto-plone-reloader"
+"addons": [
+    "plone-volto-reloader"
+],
+
+"dependencies": {
+    "plone-volto-reloader": "*"
 }
 ```
+
+Install the add-on and restart Volto:
+
+```
+yarn
+yarn start
+```
+
+Then the reload middleware will be accesible via http://localhost:3000/@@reload
 
 ## Credits
 
